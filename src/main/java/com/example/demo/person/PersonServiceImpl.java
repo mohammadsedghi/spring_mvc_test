@@ -4,10 +4,13 @@ package com.example.demo.person;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+import org.springframework.validation.annotation.Validated;
 
 import java.util.Collection;
 
-@CustomAnnotationService
+@Service
+@Transactional
+@Validated
 public class PersonServiceImpl implements PersonService{
     private final PersonRepository personRepository;
     private final PersonMapper personMapper;
